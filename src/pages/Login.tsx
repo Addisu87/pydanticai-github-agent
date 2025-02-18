@@ -49,7 +49,7 @@ export default function Login() {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-accent/50"
+              className="bg-white/90 text-black placeholder:text-gray-500"
             />
           </div>
           <div>
@@ -58,7 +58,7 @@ export default function Login() {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="bg-accent/50"
+              className="bg-white/90 text-black placeholder:text-gray-500"
             />
           </div>
           <div className="flex gap-4">
