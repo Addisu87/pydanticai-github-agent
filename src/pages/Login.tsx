@@ -63,14 +63,14 @@ export default function Login() {
           </div>
           <div className="flex gap-4">
             <Button
-              className="flex-1"
+              className="flex-1 bg-primary hover:bg-primary/80 text-primary-foreground font-semibold"
               onClick={() => handleSubmit(false)}
               disabled={isLoading}
             >
               Sign In
             </Button>
             <Button
-              className="flex-1"
+              className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground font-semibold border-2"
               variant="outline"
               onClick={() => handleSubmit(true)}
               disabled={isLoading}
