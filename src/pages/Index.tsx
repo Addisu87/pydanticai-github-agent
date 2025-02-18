@@ -152,8 +152,15 @@ export default function Index() {
       
       <div className={`flex-1 transition-all duration-300 ${isSidebarOpen ? 'ml-80' : 'ml-12'}`}>
         <div className="p-4 h-screen flex flex-col">
-          <div className="flex justify-end mb-4">
-            <Button variant="ghost" size="icon" onClick={handleSignOut}>
+          <div className="flex justify-between items-center mb-4">
+            <Button
+              variant="default"
+              onClick={() => setSessionId(uuidv4())}
+              className="bg-accent text-accent-foreground"
+            >
+              New Conversation
+            </Button>
+            <Button variant="destructive" size="icon" onClick={handleSignOut}>
               <LogOut className="h-5 w-5" />
             </Button>
           </div>
@@ -185,7 +192,7 @@ export default function Index() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your message..."
                 disabled={isLoading}
-                className="bg-accent/50"
+                className="bg-white/90 text-black placeholder:text-gray-500"
               />
               <Button type="submit" disabled={isLoading}>
                 Send
